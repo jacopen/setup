@@ -53,15 +53,15 @@ chkconfig activemq on
 service activemq start
 echo "OO done with activemq"
 
-echo "OO install cassandra 2.1.12"
+echo "OO install cassandra 2.1.13"
 cd /opt
-wget -nv $apache_mirror/cassandra/2.1.12/apache-cassandra-2.1.12-bin.tar.gz
-if [ ! -e "/opt/apache-cassandra-2.1.12-bin.tar.gz" ]; then
+wget -nv $apache_mirror/cassandra/2.1.13/apache-cassandra-2.1.13-bin.tar.gz
+if [ ! -e "/opt/apache-cassandra-2.1.13-bin.tar.gz" ]; then
 	echo "Can not get Cassandra distribution! "
 	exit 1
 fi
-tar -xzvf apache-cassandra-2.1.12-bin.tar.gz
-ln -sf apache-cassandra-2.1.12 cassandra
+tar -xzvf apache-cassandra-2.1.13-bin.tar.gz
+ln -sf apache-cassandra-2.1.13 cassandra
 mkdir -p /opt/cassandra/log
 cp "$VAGRANT_MNT/cassandra/2.1/init.d/cassandra" /etc/init.d
 
